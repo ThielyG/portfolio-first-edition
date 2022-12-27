@@ -15,8 +15,7 @@ body {
     width: 100%;
     background-color: #252c36fa;
     color: rgb(218, 217, 217);
-    /* font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;*/
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Exo 2', sans-serif, Verdana;
 }
 header{
     background-image: url(home-images/code.png);
@@ -40,7 +39,6 @@ nav {
     font-size: 1.5em;
     display: flex;
     justify-content: space-between;  
-    font-family: 'Exo 2', sans-serif;
 }
 nav a {
     text-decoration: none;
@@ -104,10 +102,9 @@ p{
     color: #46f6b3db;
 }
 footer {
-    /*background: #13ec9947;*/
     position: static;
     width: 100%;
-    bottom: 0;
+    /* bottom: 0; */
     display: block;
     left: auto;
     text-align: center;
@@ -139,8 +136,6 @@ footer {
     text-align: justify;
     margin-left: 100px;
     margin-right: 80px;
-    /* margin-bottom: 20px;
-    margin-top: 20px; */
 }
 ul {
     font-size: 1.5em;
@@ -326,6 +321,13 @@ input, textarea {
     border-radius: 5px;
     padding: 10px;
 } 
+#age-label{
+    color: #fff;
+    margin-top: 20px;
+}
+#age{
+   margin-top: 20px;
+}
 #mySubmit {
     margin-left: 220px;
     font-size: 1.2em;    

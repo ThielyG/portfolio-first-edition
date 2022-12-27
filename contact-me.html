@@ -9,8 +9,21 @@
 
   <body>
     <script type="text/javascript">
-      window.alert("Don't forget to follow me on my social media! :)"); 
   </script> 
+  <script>
+      window.alert("Don't forget to follow me on my social media! :)"); 
+      function validateForm() {
+        let x = document.forms["myform"]["myName"].value;
+        if (x == "") {
+          alert("Name must be filled out!");
+          return false;}
+
+        let y = document.forms["myform"]["myEmail"].value;
+          if (y == "") {
+          alert("E-mail must be filled out!");
+          return false;}
+}
+  </script>
     <header>
       <h2>CONTACT ME</h2>
     </header>
@@ -46,14 +59,13 @@
           /></a>
         </div>
       </div>
-      <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+      <form name="myform" method="post" action="https://webdevbasics.net/scripts/demo.php" onsubmit="return validateForm()">
         <label for="myName"></label>
         <input
           size="60"
           type="text"
           name="myName"
           id="myName"
-          required="required"
           placeholder="Name"
         />
         <label for="mySubject"></label>
@@ -71,9 +83,9 @@
           type="email"
           name="myEmail"
           id="myEmail"
-          required="required"
-          placeholder="Email"
+          placeholder="E-mail"
         />
+        <div id="age-label"><label for="age">How old are you?</label><input type="number" name="age" id="age" min="18" max="120" step="1" value="18"></div>
         <label for="myMessage"></label>
         <textarea
           name="myMessage"
